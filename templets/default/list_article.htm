@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{dede:field.title/}_{dede:global.cfg_webname/}</title>
+<meta name="keywords" content="{dede:field name='keywords'/}" />
+<meta name="description" content="{dede:field name='description' function='html2text(@me)'/}" />
+<link href="/skin/css/index.css" rel="stylesheet" type="text/css">
+<title>{dede:field.title/}-{dede:global.cfg_webname/}</title>
+<script type="text/javascript" src="/skin/js/jquery-1.7.2.min.js"></script>
+</head>
+<body>
+{dede:include filename="head.htm"/} 
+<!--通用间隔开始-->
+<div class="jiange1 jiange3"> {dede:type typeid='8'}
+  <h1>NEWS INFORMATION</h1>
+  <h2>[field:typename /]</h2>
+  {/dede:type} <img class="hong" src="/skin/images/jiange2.png" /> </div>
+<!--通用间隔结束--> 
+<!--新闻资讯开始-->
+<div class="zxdt xwzx">
+  <div class="news"> {dede:list pagesize="9" infolen='180'} <a href="[field:arcurl/]">
+    <div class="wk1"> <img src="[field:picname/]" />
+      <li> <span>[field:title/]</span>[field:pubdate function="GetDateTimeMK(@me)"/]</br>
+        [field:infos/] </li>
+    </div>
+    </a> {/dede:list} </div>
+  
+  <!-- 页码开始 -->
+  <div class="sort-page">{dede:pagelist listitem="pageno" listsize="3"/}</div>
+  <!-- 页码结束 --> 
+</div>
+</div>
+<!--新闻资讯结束--> 
+
+{dede:include filename="footer.htm"/} 
+
+<!--底部结束--> 
+<script type="text/javascript" src="/skin/js/jquery-1.7.2.min.js"></script> 
+<script type="text/javascript" src="/skin/js/sybanner1.js"></script> 
+<script type="text/javascript" src="/skin/js/sybanner2.js"></script> 
+<script type="text/javascript" src="/skin/js/fenxiang.js"></script>
+</body>
+</html>

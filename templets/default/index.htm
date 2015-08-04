@@ -1,0 +1,139 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="{dede:global.cfg_keywords/}">
+<meta name="description" content="{dede:global.cfg_description/}">
+<meta name="author" content="design by www.dede58.com" />
+<link href="/skin/css/index.css" rel="stylesheet" type="text/css">
+<title>{dede:global.cfg_webname/}</title>
+</head>
+<body>
+<a href="/" target="_blank" style="color:#003399;">
+<div title="" style="font-family: Arial; font-size:14px; position:fixed; _position:absolute; z-index:9718; width:60px; text-align:center; background:#eee; bottom:0; left:0;"></div>
+<div style=" display:none;"></div>
+</a> 
+<!--引用通用顶部和导航和banner--> 
+<!--顶部开始-->
+<div class="top">
+  <div class="kuang"> <img class="logo" src="/skin/images/logo12.png" />
+    <div class="menu"> {dede:channel type='top' row='5'} <a href='[field:typelink/]'>
+      <li>[field:typename/] </li>
+      </a> {/dede:channel} <a href="/">
+      <li class="curr">网站首页</li>
+      </a> </div>
+  </div>
+</div>
+<!--顶部结束--> 
+
+<!--banner开始-->
+<div id="full-screen-slider">
+  <ul id="slides">
+    <li style="background:url('/skin/images/141507531.jpg') no-repeat center top"><a href="/" ></a></li>
+    <li style="background:url('/skin/images/141519187.jpg') no-repeat center top"><a href="/" ></a></li>
+    <li style="background:url('/skin/images/141528747.jpg') no-repeat center top"><a href="/" ></a></li>
+  </ul>
+</div>
+<!--banner结束--> 
+
+<!--通用间隔开始-->
+<div class="jiange1">
+  <h1>SCOPE OF SERVICES</h1>
+  <h2>服务范围</h2>
+</div>
+<!--通用间隔结束--> 
+
+<!--服务范围开始-->
+<div class="fwfw"> {dede:type typeid='5'} <a href="[field:typelink /]">
+  <div class="fuwu"> <img class="tubiao" src="/skin/images/fuwu1.png" /> <span>Website Building</span>
+    <li>网站建设</li>
+  </div>
+  </a> {/dede:type}
+  {dede:type typeid='5'} <a href="[field:typelink /]">
+  <div class="fuwu"> <img class="tubiao" src="/skin/images/fuwu2.png" /> <span>Custom Made</span>
+    <li>个性定制</li>
+  </div>
+  </a> {/dede:type}
+  {dede:type typeid='5'} <a href="[field:typelink /]">
+  <div class="fuwu"> <img class="tubiao" src="/skin/images/fuwu3.png" /> <span>Mobile Develop</span>
+    <li>移动开发</li>
+  </div>
+  </a> {/dede:type}
+  {dede:type typeid='5'} <a href="[field:typelink /]">
+  <div class="fuwu"> <img class="tubiao" src="/skin/images/fuwu4.png" /> <span>Web Promotion</span>
+    <li>网络推广</li>
+  </div>
+  </a> {/dede:type} </div>
+<!--服务范围结束--> 
+
+<!--案例展示开始-->
+<div class="alzs">
+<!--通用间隔开始-->
+<div class="jiange1 jiange2">
+  <h1>CLASSICAL CASE</h1>
+  {dede:type typeid='2'}
+  <h2>[field:typename/]</h2>
+  {/dede:type} </div>
+<!--通用间隔结束-->
+<div class="lanmu"> </div>
+<div class="waikuang">
+  <div class=" anli"  style="display: block;"> {dede:arclist typeid='2' row='8' } <a href="[field:arcurl/]">
+    <div class="tupian"> <img src="[field:litpic/]" />
+      <div class="block"></div>
+      <div class="text"><span>[field:title/]</span></div>
+    </div>
+    </a> {/dede:arclist} </div>
+</div>
+{dede:type typeid='2'}<a href="[field:typeurl/]">
+<div class="more"></div>
+</a> {/dede:type} 
+<!--案例展示结束--> 
+
+<!--通用间隔开始-->
+<div class="jiange1">
+  <h1>Management team</h1>
+  <h2>精英团队</h2>
+</div>
+<!--通用间隔结束--> 
+
+<!--团队介绍开始-->
+<div class="tdjs">
+  <p>一、我们是值得信赖的设计团队<br />
+    二、我们有优质的售后服务体系<br />
+    三、我们追求完美的产品设计<br />
+        "织梦帮"出品，必属精品"是我们设计作品宗旨，亦是我们对每一位客户的承诺。每一件作品无不是设计团队的倾力倾心之作。无论策划、创意还是视觉设计，"织梦帮"设计团队均力求完美，而这样的完美不仅是视觉的享受，更是商业价值、品牌理念与视觉的共荣之作！</p>
+  <a href="#"><img class="rytp" src="/skin/images/144614107.jpg" /></a> </div>
+<!--团队介绍结束--> 
+
+<!--通用间隔开始-->
+<div class="jiange1">
+  <h1>NEWS INFORMATION</h1>
+  <h2>新闻资讯</h2>
+</div>
+<!--通用间隔结束--> 
+
+<!--最新动态开始-->
+<div class="zxdt">
+  <div class="news"> {dede:arclist typeid='8' row='3' titlelen='30' infolen='100'} <a href="[field:arcurl/]">
+    <div class="wk1"> <img src="[field:litpic/]" />
+      <li> <span>1.[field:title/]</span> [field:pubdate function="MyDate('Y-m-d',@me)"/]<br />
+        [field:infos/] </li>
+    </div>
+    </a> {/dede:arclist} </div>
+</div>
+{dede:type typeid='8'} <a href="[field:typeurl/]">
+<div class="more more1"></div>
+</a> {/dede:type} 
+<!--最新动态结束--> 
+
+<!--引用底部--> 
+<!--底部开始--> 
+{dede:include filename="footer.htm"/} 
+<!--底部结束--> 
+<script type="text/javascript" src="/skin/js/jquery-1.7.2.min.js"></script> 
+<script type="text/javascript" src="/skin/js/sybanner1.js"></script> 
+<script type="text/javascript" src="/skin/js/sybanner2.js"></script> 
+<script type="text/javascript" src="/skin/js/fenxiang.js"></script> 
+<script type="text/javascript" src="/skin/js/daohangbd.js"></script>
+</body>
+</html>

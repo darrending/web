@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{dede:field.title/}_{dede:global.cfg_webname/}</title>
+<meta name="keywords" content="{dede:field name='keywords'/}" />
+<meta name="description" content="{dede:field name='description' function='html2text(@me)'/}" />
+<link href="/skin/css/index.css" rel="stylesheet" type="text/css">
+<title>{dede:field.title/}-{dede:global.cfg_webname/}</title>
+<script type="text/javascript" src="/skin/js/jquery-1.7.2.min.js"></script>
+</head>
+<body>
+{dede:include filename="head.htm"/} 
+<!--分类和间隔--> 
+
+<!--通用间隔开始-->
+<div class="jiange1 jiange3">
+  <h1>CASE</h1>
+  <h2>经典案例</h2>
+  <img class="hong" src="/skin/images/jiange2.png" /> </div>
+<!--通用间隔结束--> 
+<!--经典案例开始-->
+<div class="jdal">
+  <div class="zblm"> {dede:channel type="son" currentstyle="<a href='~typelink~' ~rel~>
+    <li class='curr'>~typename~</li>
+    </a>" } <a href='[field:typeurl/]'>
+    <li >[field:typename/]</li>
+    </a> {/dede:channel} </div>
+  <div class="ybnr">
+    <div class="anli ybal"> {dede:list pagesize="9"} <a href="[field:arcurl/]">
+      <div class="tupian"> <img src="[field:picname/]" />
+        <div class="block"></div>
+        <div class="text"><span>[field:title/]</span></div>
+      </div>
+      </a> {/dede:list} </div>
+    <!-- 页码开始 -->
+    <div class="sort-page"> {dede:pagelist listitem="pageno" listsize="5"/} </div>
+    <!-- 页码结束 --> 
+  </div>
+</div>
+</div>
+<!--经典案例结束--> 
+
+{dede:include filename="footer.htm"/} 
+
+<!--底部结束--> 
+<script type="text/javascript" src="/skin/js/jquery-1.7.2.min.js"></script> 
+<script type="text/javascript" src="/skin/js/sybanner1.js"></script> 
+<script type="text/javascript" src="/skin/js/sybanner2.js"></script> 
+<script type="text/javascript" src="/skin/js/fenxiang.js"></script>
+</body>
+</html>

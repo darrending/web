@@ -1,0 +1,120 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>{dede:field.title/}_{dede:global.cfg_webname/}</title>
+<meta name="keywords" content="{dede:field name='keywords'/}" />
+<meta name="description" content="{dede:field name='description' function='html2text(@me)'/}" />
+<link href="/skin/css/index.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+﻿ {dede:include filename="head.htm"/}
+<div class="jiange1 jiange3">
+  <h1> viki introduction</h1>
+  <h2> 我们简介</h2>
+  <img class="hong" src="/skin/images/1.png" /></div>
+<!--通用间隔结束--><!--mou简介开始-->
+<div class="gsjj"> <img class="ygfc" src="/skin/images/1.jpg" />
+  <p> {dede:field.content/}</p>
+</div>
+<!--简介结束--> 
+<!--精英团队开始-->
+<div class="jytd"> 
+  <!--通用间隔开始-->
+  <div class="jiange1 jiange2 jiange4">
+    <h1>Management team</h1>
+    <h2>精英团队</h2>
+    <img class="hong" src="/skin/images/jiange2.png" /> </div>
+  <!--通用间隔结束-->
+  <div class="waikuang">
+    <div id="marquee1">
+      <ul style="width: 4280px; ">
+        {dede:arclist typeid='10' row='5' titlelen='30' infolen='100'} <a href="#">
+        <li>
+          <div><img src="[field:picname/]" /></div>
+          <div class="block"></div>
+          <div class="text"><span><span>[field:title/]</span>[field:infos/]</span> </div>
+        </li>
+        </a> {/dede:arclist}
+      </ul>
+    </div>
+    <div id="control" style="right:45px;"><a href="javascript:void(0);" id="goR"><img src="/skin/images/left.jpg"></a></div>
+    <div id="control" style="right:0px;"> <a href="javascript:void(0);" id="goL"><img src="/skin/images/right.jpg"></a></div>
+  </div>
+</div>
+</div>
+<!--精英团队结束--> 
+
+<!--通用间隔开始-->
+<div class="jiange1 jiange3">
+  <h1>connect us</h1>
+  <h2>关于我们</h2>
+  <img class="hong" src="/skin/images/jiange2.png" /> </div>
+<!--通用间隔结束--> 
+<!--地图-->
+<div class="map" id="dituContent">
+  <iframe src="/map.html" scrolling="no" frameborder="0" width="980px" height="306px"></iframe>
+  <div class="lxwm">
+    <div class="lxfs">
+      <li><img src="/skin/images/lx1.png" /><span>{dede:global.cfg_add/}</span></li>
+      <li><img src="/skin/images/lx2.png" /><span>{dede:global.cfg_tel/}</br>
+        </span></li>
+      <li><img src="/skin/images/lx3.png" /><span class="other">{dede:global.cfg_email/}</span></li>
+      <li><img src="/skin/images/lx4.png" /><span class="other">http://www.dedesos.com</span></li>
+    </div>
+    <div class="liuyan">
+      <li>亲爱的朋友，欢迎来到织梦帮设计建站官网，如果您想探讨关于数字化品牌的任何话题，赶快联系我们吧，醇香的咖啡已经为您备好……</li>
+      <form action="/plus/diy.php" enctype="multipart/form-data" method="post">
+        <input type="hidden" name="action" value="post" />
+        <input type="hidden" name="diyid" value="1" />
+        <input type="hidden" name="do" value="2" />
+        <table cellpadding="0" cellspacing="0" class="mess">
+          <tr>
+            <td><input type='text' name='name' id='name'   class='text' value='Name' /></td>
+          <tr>
+            <td><input type='text' name='email' id='email'   class='text' value='Email' /></td>
+          <tr>
+            <td><textarea name='content' id='content' class='text'></textarea></td>
+          </tr>
+        </table>
+        <input type="hidden" name="dede_fields" value="name,text;email,text;content,text">
+        <input type="hidden" name="dede_fieldshash" value="2096e05ad1c32f850461c9db04939c82">
+        <tr>
+          <td><input type="submit" name="submit" value="提 交" class='anniu' /></td>
+        </tr>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!--底部开始--> 
+{dede:include filename="footer.htm"/} 
+
+<!--底部结束--> 
+<script type="text/javascript" src="/skin/js/jquery-1.7.2.min.js"></script> 
+<script type="text/javascript" src="/skin/js/sybanner1.js"></script> 
+<script type="text/javascript" src="/skin/js/sybanner2.js"></script> 
+<script type="text/javascript" src="/skin/js/fenxiang.js"></script>
+</body>
+</html>
+<script type="text/javascript" src="/skin/js/1.1cplb.js"></script>
+<script type="text/javascript" src="/skin/js/1.2cplb.js"></script>
+<!--JS-->
+<script type="text/javascript">
+        $(document).ready(function () {
+            $("img[data-original]").lazyload({
+                effect: "fadeIn"
+            });
+        });
+    </script>
+<script type="text/javascript">
+		$(document).ready(function () {
+			//一次横向滚动一个
+			$('#marquee1').kxbdSuperMarquee({
+				distance:200,
+				time:5000,
+				btnGo:{left:'#goL',right:'#goR'},
+				direction:'left'
+			});
+		});
+</script>
